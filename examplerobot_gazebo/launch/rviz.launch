@@ -1,0 +1,24 @@
+<launch>
+
+  <node name="tf_broadcaster" pkg="examplerobot_gazebo" type="tf_broadcaster" />
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find examplerobot_description)/urdf/examplerobot.xacro'"/>
+
+  <!-- Combine joint values -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  <node name="joint_state_plublisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+  <!-- Show in Rviz   -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find examplerobot_gazebo)/rviz/config.rviz" />
+
+  <!-- send joint values -->
+  <!--
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="True"/>
+  </node>
+  -->
+
+  
+
+</launch>

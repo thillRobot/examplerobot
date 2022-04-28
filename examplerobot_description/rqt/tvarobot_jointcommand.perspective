@@ -1,0 +1,118 @@
+{
+  "keys": {},
+  "groups": {
+    "mainwindow": {
+      "keys": {
+        "geometry": {
+          "repr(QByteArray.hex)": "QtCore.QByteArray(b'01d9d0cb000300000000005e0000016f000007140000035c0000005e00000194000007140000035c000000000000000007800000005e00000194000007140000035c')",
+          "type": "repr(QByteArray.hex)",
+          "pretty-print": "     ^ o   \\ ^     \\      ^     \\"
+        },
+        "state": {
+          "repr(QByteArray.hex)": "QtCore.QByteArray(b'000000ff00000000fd0000000100000003000006b70000019dfc0100000002fb0000006a007200710074005f0072006f0062006f0074005f007300740065006500720069006e0067005f005f0052006f0062006f0074005300740065006500720069006e0067005f005f0031005f005f0052006f0062006f0074005300740065006500720069006e0067005500690100000000000001e60000000000000000fb00000058007200710074005f007000750062006c00690073006800650072005f005f005000750062006c00690073006800650072005f005f0031005f005f005000750062006c006900730068006500720057006900640067006500740100000000000006b70000023d00ffffff000006b70000000000000004000000040000000800000008fc00000001000000030000000100000036004d0069006e0069006d0069007a006500640044006f0063006b00570069006400670065007400730054006f006f006c0062006100720000000000ffffffff0000000000000000')",
+          "type": "repr(QByteArray.hex)",
+          "pretty-print": "                 jrqt_robot_steering__RobotSteering__1__RobotSteeringUi          Xrqt_publisher__Publisher__1__PublisherWidget                            6MinimizedDockWidgetsToolbar        "
+        }
+      },
+      "groups": {
+        "toolbar_areas": {
+          "keys": {
+            "MinimizedDockWidgetsToolbar": {
+              "repr": "8",
+              "type": "repr"
+            }
+          },
+          "groups": {}
+        }
+      }
+    },
+    "pluginmanager": {
+      "keys": {
+        "running-plugins": {
+          "repr": "{'rqt_publisher/Publisher': [1]}",
+          "type": "repr"
+        }
+      },
+      "groups": {
+        "plugin__rqt_publisher__Publisher__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__PublisherWidget": {
+              "keys": {
+                "dock_widget_title": {
+                  "repr": "'Message Publisher'",
+                  "type": "repr"
+                },
+                "dockable": {
+                  "repr": "True",
+                  "type": "repr"
+                },
+                "parent": {
+                  "repr": "None",
+                  "type": "repr"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "publishers": {
+                  "repr": "\"[{'topic_name': '/tvarobot/joint1_position_controller/command', 'type_name': 'std_msgs/Float64', 'rate': 100.0, 'enabled': False, 'publisher_id': 0, 'counter': 0, 'expressions': {'/tvarobot/joint1_position_controller/command/data': '1.5'}}, {'topic_name': '/tvarobot/joint2_position_controller/command', 'type_name': 'std_msgs/Float64', 'rate': 100.0, 'enabled': False, 'publisher_id': 1, 'counter': 0, 'expressions': {'/tvarobot/joint2_position_controller/command/data': '1.5'}}, {'topic_name': '/tvarobot/joint3_position_controller/command', 'type_name': 'std_msgs/Float64', 'rate': 100.0, 'enabled': False, 'publisher_id': 2, 'counter': 0, 'expressions': {'/tvarobot/joint3_position_controller/command/data': '1.5'}}, {'topic_name': '/tvarobot/joint4_position_controller/command', 'type_name': 'std_msgs/Float64', 'rate': 100.0, 'enabled': False, 'publisher_id': 3, 'counter': 0, 'expressions': {}}, {'topic_name': '/tvarobot/joint5_position_controller/command', 'type_name': 'std_msgs/Float64', 'rate': 100.0, 'enabled': False, 'publisher_id': 4, 'counter': 0, 'expressions': {}}, {'topic_name': '/tvarobot/joint6_position_controller/command', 'type_name': 'std_msgs/Float64', 'rate': 100.0, 'enabled': False, 'publisher_id': 5, 'counter': 0, 'expressions': {}}]\"",
+                  "type": "repr"
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__rqt_robot_steering__RobotSteering__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__RobotSteeringUi": {
+              "keys": {
+                "dock_widget_title": {
+                  "repr": "'Robot Steering'",
+                  "type": "repr"
+                },
+                "dockable": {
+                  "repr": "'true'",
+                  "type": "repr"
+                },
+                "parent": {
+                  "repr": "None",
+                  "type": "repr"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "topic": {
+                  "repr": "'/cmd_vel'",
+                  "type": "repr"
+                },
+                "vw_max": {
+                  "repr": "'3'",
+                  "type": "repr"
+                },
+                "vw_min": {
+                  "repr": "'-3'",
+                  "type": "repr"
+                },
+                "vx_max": {
+                  "repr": "'1'",
+                  "type": "repr"
+                },
+                "vx_min": {
+                  "repr": "'-1'",
+                  "type": "repr"
+                }
+              },
+              "groups": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
