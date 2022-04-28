@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(examplerobot)
+project(examplerobot_interface)
 #cmake_minimum_required(VERSION 3.1.3)
 #project(moveit_tutorials)
 
