@@ -17,8 +17,8 @@ find_package(catkin REQUIRED
     moveit_visual_tools
     pluginlib
     geometric_shapes
-    pcl_ros
-    pcl_conversions
+   #pcl_ros
+   #pcl_conversions
     rosbag
     tf2_ros
     tf2_eigen

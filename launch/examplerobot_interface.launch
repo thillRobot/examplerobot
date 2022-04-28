@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="examplerobot_interface" pkg="examplerobot" type="examplerobot_interface" respawn="false" output="screen">
+  </node>
+
+</launch>

@@ -17,7 +17,10 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 RUN apt update && apt install -y ros-noetic-rviz ros-noetic-joint-state-publisher-gui ros-noetic-gazebo-ros ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control ros-noetic-rqt-reconfigure ros-noetic-rqt-publisher ros-noetic-controller-manager ros-noetic-ros-control ros-noetic-ros-controllers 
 
-RUN apt update && apt install -y ros-noetic-moveit
+RUN apt update && apt install -y ros-noetic-moveit ros-noetic-moveit ros-noetic-moveit-core ros-noetic-rviz-visual-tools ros-noetic-moveit-visual-tools 
+
+#ros-noetic-pcl-ros
+
 
 ENV EXBOT_WS=/examplerobot_workspace
 
