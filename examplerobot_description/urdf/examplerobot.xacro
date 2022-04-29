@@ -10,12 +10,12 @@
   <!-- BGN - Robot description -->
 
   <!-- Link ref - ref_link - this is the 'dummy link' -->   
-  <!--
+  
   <xacro:ref_link_mesh name="${link_ref_name}"
               origin_rpy="0 0 0" origin_xyz="0 0 0"
               meshfile="package://examplerobot_description/meshes/base_link.stl"
               meshscale="0.0001 0.0001 0.0001" /> 
-  -->
+  
 
   <!-- Link 0 - base_link --> 
   <xacro:link_mesh name="${link_00_name}"
@@ -87,7 +87,7 @@
               meshfile="package://examplerobot_description/meshes/end_effector.stl"
               meshscale="0.001 0.001 0.001" />           
 
-
+  <!-- Joint 0 - world__base_link --> 
   <link name="world"/>
   <xacro:ref_joint name="world__${link_00_name}" type="fixed"
            axis_xyz="0 0 1"
@@ -99,7 +99,7 @@
   <xacro:ref_joint name="${link_ref_name}__${link_00_name}" type="fixed"
            axis_xyz="0 0 1"
            origin_rpy="0 0 0" origin_xyz="0 0 0"
-           parent="base_link" child="ref_link" />             
+           parent="ref_link" child="base_link" />             
   -->
 
   <!-- Joint 1 - base_link__link_01 -->          
