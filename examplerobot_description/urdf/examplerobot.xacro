@@ -97,11 +97,12 @@
   <xacro:ref_link_mesh name="${link_ref_name}"
               origin_rpy="0 0 0" origin_xyz="0 0 0"
               meshfile="package://examplerobot_description/meshes/base_link.stl"
-              meshscale="0.0001 0.0001 0.0001" />     
+              meshscale="0.0001 0.0001 0.0001" />    
+
   <xacro:ref_joint name="${link_ref_name}__${link_00_name}" type="fixed"
            axis_xyz="0 0 1"
            origin_rpy="0 0 0" origin_xyz="0 0 0"
-           parent="ref_link" child="base_link" />             
+           parent="base_link" child="ref_link" />             
   
 
   <!-- Joint 1 - base_link__link_01 -->          
