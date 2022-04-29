@@ -85,13 +85,19 @@
               meshfile="package://examplerobot_description/meshes/end_effector.stl"
               meshscale="0.001 0.001 0.001" />           
 
-              
 
-  <!-- Joint 0 - ref_link__base_link -->          
+
+  <!-- Joint 0 - ref_link__base_link -->   
+  <!--       
   <xacro:ref_joint name="${link_ref_name}__${link_00_name}" type="fixed"
            axis_xyz="0 0 1"
            origin_rpy="0 0 0" origin_xyz="0 0 0"
            parent="base_link" child="ref_link" />             
+  -->
+   <xacro:ref_joint name="world__${link_00_name}" type="fixed"
+           axis_xyz="0 0 1"
+           origin_rpy="0 0 0" origin_xyz="0 0 0"
+           parent="world" child="base_link" />
 
   <!-- Joint 1 - base_link__link_01 -->          
   <xacro:rev_joint name="${link_00_name}__${link_01_name}" type="revolute"
