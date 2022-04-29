@@ -94,6 +94,7 @@
            origin_rpy="0 0 0" origin_xyz="0 0 0"
            parent="base_link" child="ref_link" />             
   -->
+   <link name="world"/>
    <xacro:ref_joint name="world__${link_00_name}" type="fixed"
            axis_xyz="0 0 1"
            origin_rpy="0 0 0" origin_xyz="0 0 0"
