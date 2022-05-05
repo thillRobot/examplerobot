@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: thillRobot
     author_email: thillRobot@gmail.com
-    generated_timestamp: 1649993315
+    generated_timestamp: 1651764980
