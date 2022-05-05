@@ -55,7 +55,7 @@ const double tau = 2 * M_PI;
 
 int main(int argc, char** argv)
 {
-  ros::init(argc, argv, "tvarobot_interface");
+  ros::init(argc, argv, "examplerobot_interface");
   ros::NodeHandle node_handle;
 
   // ROS spinning must be running for the MoveGroupInterface to get information
@@ -144,9 +144,9 @@ int main(int argc, char** argv)
 
   geometry_msgs::Pose target_pose1;
   target_pose1.orientation = quat_msg;
-  target_pose1.position.x = 0.05;
+  target_pose1.position.x = 0.5;
   target_pose1.position.y = 0.00;
-  target_pose1.position.z = 0.46;
+  target_pose1.position.z = 0.75;
 
   move_group_interface.setPoseTarget(target_pose1);
 
@@ -171,11 +171,11 @@ int main(int argc, char** argv)
 
   // Finally, to execute the trajectory stored in my_plan, you could use the following method call:
   // Note that this can lead to problems if the robot moved in the meanwhile.
-  // move_group_interface.execute(my_plan);
+  move_group_interface.execute(my_plan);
 
   // Moving to a pose goal 1
 
-  move_group_interface.move();
+  //move_group_interface.move();
 
 
   //tf2::Quaternion quat_tf;
@@ -187,9 +187,9 @@ int main(int argc, char** argv)
 
   geometry_msgs::Pose target_pose2;
   target_pose2.orientation = quat_msg;
-  target_pose2.position.x = 0.055;
-  target_pose2.position.y = 0.00;
-  target_pose2.position.z = 0.46;
+  target_pose2.position.x = 0.5;
+  target_pose2.position.y = 0.1;
+  target_pose2.position.z = 0.75;
 
   move_group_interface.setPoseTarget(target_pose2);
 
@@ -209,7 +209,8 @@ int main(int argc, char** argv)
   visual_tools.trigger();
   visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window to continue the demo");
 
-  move_group_interface.move();
+  move_group_interface.execute(my_plan);
+  //move_group_interface.move();
 
 
    //tf2::Quaternion quat_tf;
@@ -221,9 +222,9 @@ int main(int argc, char** argv)
 
   geometry_msgs::Pose target_pose3;
   target_pose3.orientation = quat_msg;
-  target_pose3.position.x = 0.06;
-  target_pose3.position.y = 0.00;
-  target_pose3.position.z = 0.46;
+  target_pose3.position.x = 0.5;
+  target_pose3.position.y = 0.2;
+  target_pose3.position.z = 0.75;
 
   move_group_interface.setPoseTarget(target_pose3);
 
@@ -243,7 +244,8 @@ int main(int argc, char** argv)
   visual_tools.trigger();
   visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window to continue the demo");
 
-  move_group_interface.move();
+  move_group_interface.execute(my_plan);
+  //move_group_interface.move();
 
 
 
