@@ -55,7 +55,7 @@ const double tau = 2 * M_PI;
 
 int main(int argc, char** argv)
 {
-  ros::init(argc, argv, "tvarobot_interface");
+  ros::init(argc, argv, "examplerobot_interface");
   ros::NodeHandle node_handle;
 
   // ROS spinning must be running for the MoveGroupInterface to get information
@@ -102,7 +102,7 @@ int main(int argc, char** argv)
   // RViz provides many types of markers, in this demo we will use text, cylinders, and spheres
   Eigen::Isometry3d text_pose = Eigen::Isometry3d::Identity();
   text_pose.translation().z() = 1.0;
-  visual_tools.publishText(text_pose, "MoveGroupInterface Demo for TVAROBOT", rvt::WHITE, rvt::XLARGE);
+  visual_tools.publishText(text_pose, "MoveGroupInterface Demo for examplerobot", rvt::WHITE, rvt::XLARGE);
 
   // Batch publishing is used to reduce the number of messages being sent to RViz for large visualizations
   visual_tools.trigger();
