@@ -1,6 +1,9 @@
 <launch>
 
-  <node name="examplerobot_interface" pkg="examplerobot" type="examplerobot_interface" respawn="false" output="screen">
+  <include file="$(find examplerobot_moveit_config)/launch/demo.launch">
+  </include>
+
+  <node name="examplerobot_interface" pkg="examplerobot_interface" type="examplerobot_interface" respawn="false" output="screen">
   </node>
 
 </launch>
