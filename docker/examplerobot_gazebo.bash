@@ -20,4 +20,4 @@ docker run -it \
     --volume="$XAUTH:$XAUTH" \
     --runtime=nvidia \
     examplerobot \
-    roslaunch examplerobot_gazebo gazebo.launch x:=1 y:=1 z:=1
+    roslaunch examplerobot_gazebo examplerobot_gazebo.launch x:=1 y:=1 z:=1

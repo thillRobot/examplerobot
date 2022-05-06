@@ -50,7 +50,4 @@
   <node name="joint_state_gui" pkg="rqt_gui" type="rqt_gui"
     args="--perspective-file $(find examplerobot_description)/rqt/examplerobot_jointcommand.perspective" />
 
-    
-
-
 </launch>
