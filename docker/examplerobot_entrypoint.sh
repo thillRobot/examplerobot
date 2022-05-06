@@ -8,7 +8,7 @@ mkdir -p $EXBOT_WS/src
 cd $EXBOT_WS/src
 git clone https://github.com/thillRobot/examplerobot_ros.git -b noetic-devel
 cd $EXBOT_WS
-catkin_make 
+catkin build 
 
 source $EXBOT_WS/devel/setup.bash
 
