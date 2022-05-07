@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:macro name="ref_joint" params="name type axis_xyz origin_rpy origin_xyz parent child ">
+  <xacro:macro name="fixed_joint" params="name type axis_xyz origin_rpy origin_xyz parent child ">
     <joint name="${name}" type="${type}">
       <axis xyz="${axis_xyz}" />
       <origin rpy="${origin_rpy}" xyz="${origin_xyz}" />
