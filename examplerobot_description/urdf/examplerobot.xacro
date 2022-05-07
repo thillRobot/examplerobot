@@ -155,9 +155,9 @@
            limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />  
   
   <!-- Joint 7 - link_06__end_effector -->
-  <xacro:rev_joint name="${link_06_name}__${link_07_name}" type="fixed"
+  <xacro:fixed_joint name="${link_06_name}__${link_07_name}" type="fixed"
            axis_xyz="0 0 1"
-           origin_rpy="0 0 0" origin_xyz="0 0 0"
+           origin_rpy="0 0 0" origin_xyz="0 0 .5"
            parent="link_06" child="end_effector" />               
 
   <!-- END - Robot description -->
