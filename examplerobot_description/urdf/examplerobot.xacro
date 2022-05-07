@@ -150,7 +150,7 @@
   <!-- Joint 6 - link_05__link_06 -->             
   <xacro:rev_joint name="${link_05_name}__${link_06_name}" type="revolute"
            axis_xyz="0 0 1"
-           origin_rpy="1.571 0 0" origin_xyz="0.0 -0.5 0.0"
+           origin_rpy="1.571 0 0" origin_xyz="0.0 -0.45 0.0"
            parent="link_05" child="link_06"
            limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />  
   
