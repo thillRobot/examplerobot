@@ -17,7 +17,7 @@
               iyy="5.3235" iyz="0"
               izz="3.9655"
               meshfile="package://examplerobot_description/meshes/base_link.stl"
-              meshscale="0.001 0.001 0.001" />
+              meshscale="1.0 1.0 1.0" />
 
   <!-- Link 1 - link_01 -->             
   <xacro:link_mesh name="${link_01_name}"
@@ -27,7 +27,7 @@
               iyy="1.3235" iyz="0"
               izz="0.9655"
               meshfile="package://examplerobot_description/meshes/link1.stl"
-              meshscale="0.001 0.001 0.001" />
+              meshscale="1.0 1.0 1.0" />
 
   <!-- Link 2 - link_02 -->  
   <xacro:link_mesh name="${link_02_name}"
@@ -37,7 +37,7 @@
               iyy="1.3235" iyz="0"
               izz="0.9655"
               meshfile="package://examplerobot_description/meshes/link2.stl"
-              meshscale="0.001 0.001 0.001" /> 
+              meshscale="1.0 1.0 1.0" /> 
 
   <!-- Link 3 - link_03 -->  
   <xacro:link_mesh name="${link_03_name}"
@@ -47,7 +47,7 @@
               iyy="1.3235" iyz="0"
               izz="0.9655"
               meshfile="package://examplerobot_description/meshes/link3.stl"
-              meshscale="0.001 0.001 0.001" />            
+              meshscale="1.0 1.0 1.0" />            
 
   <!-- Link 4 - link_04 -->  
   <xacro:link_mesh name="${link_04_name}"
@@ -57,7 +57,7 @@
               iyy="1.3235" iyz="0"
               izz="0.9655"
               meshfile="package://examplerobot_description/meshes/link4.stl"
-              meshscale="0.001 0.001 0.001" />
+              meshscale="1.0 1.0 1.0" />
 
   <!-- Link 5 - link_05 -->  
   <xacro:link_mesh name="${link_05_name}"
@@ -67,7 +67,7 @@
               iyy="1.3235" iyz="0"
               izz="0.9655"
               meshfile="package://examplerobot_description/meshes/link5.stl"
-              meshscale="0.001 0.001 0.001" />            
+              meshscale="1.0 1.0 1.0" />            
 
   <!-- Link 6 - link_06 -->  
   <xacro:link_mesh name="${link_06_name}"
