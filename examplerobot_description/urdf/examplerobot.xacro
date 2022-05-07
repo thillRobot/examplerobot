@@ -155,7 +155,7 @@
            limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />  
   
   <!-- Joint 7 - link_06__end_effector -->
-  <xacro:ref_joint name="${link_ref_name}__${link_00_name}" type="fixed"
+  <xacro:ref_joint name="${link_06_name}__${link_07_name}" type="fixed"
            axis_xyz="0 0 1"
            origin_rpy="0 0 0" origin_xyz="0 0 0"
            parent="link_06" child="end_effector" />               
