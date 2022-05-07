@@ -9,9 +9,6 @@
   
   <!-- BGN - Robot description -->
 
-
-  
-
   <!-- Link 0 - base_link --> 
   <xacro:link_mesh name="${link_00_name}"
               origin_rpy="0 0 0" origin_xyz="0 0 0"
@@ -72,15 +69,25 @@
               meshfile="package://examplerobot_description/meshes/link5.stl"
               meshscale="0.001 0.001 0.001" />            
 
-  <!-- Link 6 - end_effector -->  
+  <!-- Link 6 - link_06 -->  
   <xacro:link_mesh name="${link_06_name}"
               origin_rpy="0 0 0" origin_xyz="0 0 0"
               mass="1.0"
               ixx="1.3235" ixy="0" ixz="0"
               iyy="1.3235" iyz="0"
               izz="0.9655"
+              meshfile="package://examplerobot_description/meshes/link6.stl"
+              meshscale="0.001 0.001 0.001" />    
+
+  <!-- Link 7 - end_effector -->  
+  <xacro:link_mesh name="${link_07_name}"
+              origin_rpy="0 0 0" origin_xyz="0 0 0"
+              mass="1.0"
+              ixx="1.3235" ixy="0" ixz="0"
+              iyy="1.3235" iyz="0"
+              izz="0.9655"
               meshfile="package://examplerobot_description/meshes/end_effector.stl"
-              meshscale="0.001 0.001 0.001" />           
+              meshscale="0.001 0.001 0.001" />        
 
   <!-- Joint 0 - world__base_link - fixed robot --> 
   <!--
@@ -145,8 +152,14 @@
            axis_xyz="0 0 1"
            origin_rpy="1.571 0 0" origin_xyz="0 -.200 0.0"
            parent="link_05" child="end_effector"
-           limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />          
-              
+           limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />  
+  
+  <!-- Joint 7 - link_06__end_effector -->
+  <xacro:ref_joint name="${link_ref_name}__${link_00_name}" type="fixed"
+           axis_xyz="0 0 1"
+           origin_rpy="0 0 0" origin_xyz="0 0 0"
+           parent="link_06" child="end_effector" />               
+
   <!-- END - Robot description -->
   
   <gazebo>
