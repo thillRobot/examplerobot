@@ -1,5 +1,5 @@
 controller_list:
-  - name: arm_position_controller
+  - name: examplerobot_arm_position_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
@@ -9,4 +9,4 @@ controller_list:
       - link_02__link_03
       - link_03__link_04
       - link_04__link_05
-      - link_05__end_effector
+      - link_05__link_06

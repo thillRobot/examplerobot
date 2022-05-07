@@ -7,11 +7,11 @@ controller_list:
       - link_02__link_03
       - link_03__link_04
       - link_04__link_05
-      - link_05__end_effector
+      - link_05__link_06
   - name: fake_examplerobot_end_effector_controller
     type: $(arg fake_execution_type)
     joints:
-      - link_05__end_effector
+      []
 initial:  # Define initial robot poses per group
   - group: examplerobot_arm
-    pose: pose0
+    pose: pose_00

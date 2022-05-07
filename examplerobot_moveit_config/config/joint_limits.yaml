@@ -33,7 +33,7 @@ joint_limits:
     max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
-  link_05__end_effector:
+  link_05__link_06:
     has_velocity_limits: true
     max_velocity: 0.5
     has_acceleration_limits: false
