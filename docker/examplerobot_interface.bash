@@ -15,9 +15,11 @@ docker run -it \
     --name="examplerobot_container" \
     --env="DISPLAY=$DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
-    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     --env="XAUTHORITY=$XAUTH" \
+    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     --volume="$XAUTH:$XAUTH" \
     --runtime=nvidia \
-    examplerobot \
-    roslaunch examplerobot_interface examplerobot_interface.launch
+    --volume="/home/$USER/tva-robot/tvarobot_ws/src:/home/examplerobot_ws/src" \
+    --rm \
+    tvarobot:latest \
+    /bin/bash -c "catkin build && source /home/examplerobot_ws/devel/setup.bash && roslaunch examplerobot_interface examplerobot_interface.launch" 
