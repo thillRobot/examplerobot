@@ -141,7 +141,7 @@ int main(int argc, char** argv)
   geometry_msgs::Quaternion quat_msg;
 
   //quat_tf.setRPY(0.0,0.0,tau/2.0);
-  quat_tf.setRPY(tau/2.0,-tau/4.0,0.0);
+  quat_tf.setRPY(tau/2.0,-tau/4.0,tau/8.0);
   //quat_tf.setRPY(0.0,0.0,0.0);
   
   quat_tf.normalize();
@@ -151,9 +151,9 @@ int main(int argc, char** argv)
   target_pose1.orientation = quat_msg;
 
   //target_pose1.orientation.w=0.5;
-  target_pose1.position.x = 0.25;
-  target_pose1.position.y = 0.00;
-  target_pose1.position.z = 0.80;
+  target_pose1.position.x = 0.2;
+  target_pose1.position.y = 0.2;
+  target_pose1.position.z = 0.8;
 
 
   move_group_interface.setPoseTarget(target_pose1);
@@ -267,9 +267,9 @@ int main(int argc, char** argv)
   ocm.link_name = "end_effector";
   ocm.header.frame_id = "base_link";
   ocm.orientation = move_group_interface.getCurrentPose().pose.orientation;
-  ocm.absolute_x_axis_tolerance = 0.2;
-  ocm.absolute_y_axis_tolerance = 0.2;
-  ocm.absolute_z_axis_tolerance = 0.2;
+  ocm.absolute_x_axis_tolerance = 0.1;
+  ocm.absolute_y_axis_tolerance = 3.0; // release a single axis
+  ocm.absolute_z_axis_tolerance = 0.1;
   ocm.weight = 0.9;
   
   // Now, set it as the path constraint for the group.
@@ -313,9 +313,9 @@ int main(int argc, char** argv)
   //start_pose2.position.z = 0.7;
 
   target_pose1.orientation = start_pose2.orientation; // set orientation goal to current tool pose
-  target_pose1.position.x = start_pose2.position.x+.05;
+  target_pose1.position.x = start_pose2.position.x;
   target_pose1.position.y = start_pose2.position.y;
-  target_pose1.position.z = start_pose2.position.z;
+  target_pose1.position.z = start_pose2.position.z-.25;
 
   //start_pose2.orientation = quat_msg;
   //start_pose2.position.x = 0.05;
