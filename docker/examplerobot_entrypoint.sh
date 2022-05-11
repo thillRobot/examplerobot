@@ -5,8 +5,10 @@ set -e
 source /opt/ros/noetic/setup.bash
 
 mkdir -p $EXBOT_WS/src 
-cd $EXBOT_WS/src
-git clone https://github.com/thillRobot/examplerobot_ros.git -b noetic-devel
+
+#cd $EXBOT_WS/src
+#git clone https://github.com/thillRobot/examplerobot_ros.git -b noetic-devel
+
 cd $EXBOT_WS
 catkin build 
 

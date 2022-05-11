@@ -5,9 +5,10 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-        - /MotionPlanning1/Planned Path1
+        - /MotionPlanning1/Scene Robot1
+        - /TF1
       Splitter Ratio: 0.5
-    Tree Height: 319
+    Tree Height: 338
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -108,6 +109,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          link_06:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           ref_link:
             Alpha: 1
             Show Axes: false
@@ -137,7 +143,7 @@ Visualization Manager:
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
         Planning Group: examplerobot_arm
-        Query Goal State: true
+        Query Goal State: false
         Query Start State: false
         Show Workspace: false
         Start State Alpha: 1
@@ -194,12 +200,17 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          link_06:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           ref_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-        Robot Alpha: 0.5
+        Robot Alpha: 0.75
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
@@ -212,10 +223,56 @@ Visualization Manager:
         Path: true
         Sphere: true
         Text: true
+        goal: true
         pose1: true
-        pose2: true
-        pose3: true
+        start: true
       Queue Size: 100
+      Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        base_link:
+          Value: true
+        end_effector:
+          Value: true
+        link_01:
+          Value: true
+        link_02:
+          Value: true
+        link_03:
+          Value: true
+        link_04:
+          Value: true
+        link_05:
+          Value: true
+        link_06:
+          Value: true
+        ref_link:
+          Value: true
+        world:
+          Value: true
+      Marker Alpha: 1
+      Marker Scale: 0.5
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          base_link:
+            link_01:
+              link_02:
+                link_03:
+                  link_04:
+                    link_05:
+                      link_06:
+                        end_effector:
+                          {}
+            ref_link:
+              {}
+      Update Interval: 0
       Value: true
   Enabled: true
   Global Options:
@@ -233,30 +290,30 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.9905886054039001
+      Distance: 2.7850098609924316
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
-      Field of View: 0.75
+      Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.40721073746681213
-        Y: 0.13398155570030212
-        Z: 0.845110297203064
-      Focal Shape Fixed Size: true
+        X: -0.22707177698612213
+        Y: 0.04383806139230728
+        Z: 0.8811447620391846
+      Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.499999463558197
+      Pitch: 0.19039851427078247
       Target Frame: base_link
-      Yaw: 0.9767688512802124
+      Yaw: 0.5553983449935913
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1136
+  Height: 1205
   Help:
     collapsed: false
   Hide Left Dock: false
@@ -265,11 +322,11 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000001f300000416fc0200000008fb000000100044006900730070006c006100790073010000003d000001d0000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a00560069006500770073000000010c000000a4000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000213000001f90000017d00fffffffb00000024005200760069007a00560069007300750061006c0054006f006f006c00730047007500690100000412000000410000004100ffffff0000053f0000041600000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000001f00000045ffc0200000008fb000000100044006900730070006c006100790073010000003b000001e1000000c700fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a00560069006500770073000000010c000000a4000000a000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000222000002140000016900fffffffb00000024005200760069007a00560069007300750061006c0054006f006f006c0073004700750069010000043c0000005e0000003f00ffffff000005300000045f00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RvizVisualToolsGui:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1848
-  X: 72
+  Width: 1830
+  X: 67
   Y: 27

@@ -1,0 +1,9 @@
+path_constraint:
+  name: path_constraints
+  constraints:
+    - type: orientation
+      frame_id: base_link
+      link_name: end_effector
+      orientation: [-3.1415269, -1.57079632, 0] #RPY
+      tolerances: [0.1.,0.1,0.1]
+      weight: 1.0
