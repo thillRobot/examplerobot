@@ -8,4 +8,3 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/.Xauthority:/root/.Xauthority
       - $CATKIN_WS_PATH/src:/home/examplerobot_ws/src
-    network_mode: "host"

@@ -5,7 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-        - /MotionPlanning1/Planned Path1
+        - /MotionPlanning1/Scene Robot1
         - /TF1
       Splitter Ratio: 0.5
     Tree Height: 338
@@ -143,7 +143,7 @@ Visualization Manager:
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
         Planning Group: examplerobot_arm
-        Query Goal State: true
+        Query Goal State: false
         Query Start State: false
         Show Workspace: false
         Start State Alpha: 1
@@ -210,7 +210,7 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-        Robot Alpha: 0.5
+        Robot Alpha: 0.75
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
@@ -220,7 +220,12 @@ Visualization Manager:
       Marker Topic: /rviz_visual_tools
       Name: MarkerArray
       Namespaces:
-        {}
+        Path: true
+        Sphere: true
+        Text: true
+        goal: true
+        pose1: true
+        start: true
       Queue Size: 100
       Value: true
     - Class: rviz/TF
@@ -285,7 +290,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.240000009536743
+      Distance: 1.9929805994033813
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -293,17 +298,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.75
       Focal Point:
-        X: -0.32506075501441956
-        Y: 0.2961212694644928
-        Z: 0.624260663986206
+        X: -0.13760870695114136
+        Y: 0.3178001642227173
+        Z: 0.7143949866294861
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5749999284744263
+      Pitch: 0.2699998915195465
       Target Frame: base_link
-      Yaw: 5.664949417114258
+      Yaw: 4.694944381713867
     Saved: ~
 Window Geometry:
   Displays:
@@ -323,5 +328,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1830
-  X: 454
-  Y: 27
+  X: 66
+  Y: 53

@@ -1,5 +1,7 @@
 <launch>
 
+  <!-- <param name="move_group/constraint_approximations_path" value="$(find examplerobot_moveit_config)/config/constraints.yaml"/> -->
+
   <include file="$(find examplerobot_moveit_config)/launch/demo.launch">
   </include>
 
