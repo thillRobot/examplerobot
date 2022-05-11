@@ -27,6 +27,10 @@ There are launch files in `examplerobot_interface` and `examplerobot_gazebo`.
 roslaunch examplerobot_interface examplerobot_interface.launch
 ```
 
+[![path constraints demo 01](https://img.youtube.com/vi/2-xvE710MgQ/0.jpg)](https://www.youtube.com/watch?v=2-xvE710MgQ)
+
+Click the screenshot to watch a demonstration on Youtube.
+
 ### Gazebo Simulator Example:
 ```
 roslaunch examplerobot_gazebo gazebo.launch x:=1 y:=1 z:=1
