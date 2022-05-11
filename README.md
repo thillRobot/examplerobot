@@ -1,9 +1,7 @@
 # examplerobot_ros
 This is a collection of ROS packages for `examplerobot`, a 6DOF manipulator from URDF.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2-xvE710MgQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
+[![path constraints demo 01](https://img.youtube.com/vi/2-xvE710MgQ/0.jpg)](https://www.youtube.com/watch?v=2-xvE710MgQ)
 
 ## Packages:
 - `examplerobot_description`: physical description of the robot (geometry, mass, etc.) in URDF with xacro
