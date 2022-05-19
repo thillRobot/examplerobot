@@ -223,9 +223,7 @@ Visualization Manager:
         Path: true
         Sphere: true
         Text: true
-        goal: true
         pose1: true
-        start: true
       Queue Size: 100
       Value: true
     - Class: rviz/TF
@@ -306,9 +304,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.19039851427078247
+      Pitch: 0.02539852075278759
       Target Frame: base_link
-      Yaw: 0.5553983449935913
+      Yaw: 0.6103982925415039
     Saved: ~
 Window Geometry:
   Displays:
@@ -328,5 +326,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1830
-  X: 67
-  Y: 27
+  X: 1119
+  Y: 118
