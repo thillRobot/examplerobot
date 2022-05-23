@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- <param name="move_group/constraint_approximations_path" value="$(find examplerobot_moveit_config)/config/constraints.yaml"/> -->
+
+  <include file="$(find examplerobot_moveit_config)/launch/demo.launch">
+  </include>
+
+  <node name="examplerobot_interface_ompl" pkg="examplerobot_interface" type="examplerobot_interface_ompl" respawn="false" output="screen">
+  </node>
+
+</launch>

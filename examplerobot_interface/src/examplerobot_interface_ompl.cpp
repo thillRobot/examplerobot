@@ -55,7 +55,7 @@ const double tau = 2 * M_PI;
 
 int main(int argc, char** argv)
 {
-  ros::init(argc, argv, "examplerobot_interface");
+  ros::init(argc, argv, "examplerobot_interface_ompl");
   ros::NodeHandle node_handle;
 
   // ROS spinning must be running for the MoveGroupInterface to get information

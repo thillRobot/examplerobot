@@ -13,8 +13,9 @@ find_package(catkin REQUIRED
     moveit_ros_planning
     moveit_ros_planning_interface
     moveit_ros_perception
-    rviz_visual_tools
     moveit_visual_tools
+    moveit_servo
+    rviz_visual_tools
     pluginlib
     geometric_shapes
    #pcl_ros
@@ -56,6 +57,10 @@ include_directories(SYSTEM ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${EIGEN3_
 ## Compile ##
 #############
 
-add_executable(examplerobot_interface src/examplerobot_interface.cpp)
-target_link_libraries(examplerobot_interface ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-install(TARGETS examplerobot_interface DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+add_executable(examplerobot_interface_ompl src/examplerobot_interface_ompl.cpp)
+target_link_libraries(examplerobot_interface_ompl ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+install(TARGETS examplerobot_interface_ompl DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+add_executable(examplerobot_interface_servo src/examplerobot_interface_servo.cpp)
+target_link_libraries(examplerobot_interface_servo ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+install(TARGETS examplerobot_interface_servo DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

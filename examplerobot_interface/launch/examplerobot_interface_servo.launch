@@ -1,0 +1,12 @@
+<launch>
+  <!-- Launch an example that sends commands via C++ API. -->
+
+  <include file="$(find examplerobot_moveit_config)/launch/demo.launch">
+  </include>
+  
+  <node name="examplerobot_interface_servo" pkg="examplerobot_interface" type="examplerobot_interface_servo" output="screen" >
+    <param name="parameter_ns" type="string" value="optional_parameter_namespace" />
+    <rosparam ns="optional_parameter_namespace" command="load" file="$(find examplerobot_interface)/config/examplerobot_servo.yaml" />
+  </node>
+
+</launch>
