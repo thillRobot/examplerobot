@@ -110,7 +110,7 @@ This will run the the entrypoint script I think. Close when you are done.
 Now run a service named in the `docker-compose.yaml`
 
 ```
-docker-compose run examplerobot
+docker-compose run examplerobot-ompl
 ```
 
 This will run the command associated with the service `examplerobot`
@@ -119,3 +119,13 @@ When you are done, shut down and clean up.
 
 ```
 docker-compose down --remove-orphans
+```
+
+### Planning Pipelines 
+
+The example code described above uses the default Moveit planner pipeline "ompl". 
+
+I am currently experimenting with the build from source version of Moveit and the experimental features from Jeroen Maeyer discussed [here](https://moveit.ros.org/moveit/2020/09/10/ompl-constrained-planning-gsoc.html)
+
+
+Dr. Coleman, Dr. Moll, and Dr. Zelenak discuss different options [here](https://picknik.ai/cartesian%20planners/moveit/motion%20planning/2021/01/07/guide-to-cartesian-planners-in-moveit.html) and reccomend "Moveit Servo" (see moveit/moveit_ros/moveit_servo)

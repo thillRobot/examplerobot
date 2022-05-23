@@ -1,5 +1,5 @@
 services:
-  examplerobot_ompl:
+  examplerobot-ompl:
     build: .
     command: roslaunch examplerobot_interface examplerobot_interface_ompl.launch
     environment:
@@ -10,7 +10,7 @@ services:
       - $CATKIN_WS_PATH/src:/home/examplerobot_ws/src
       # - $MOVEIT_WS_PATH/src:/home/moveit_ws/src 
 
-  examplerobot_servo:
+  examplerobot-servo:
     build: .
     command: roslaunch examplerobot_interface examplerobot_interface_servo.launch
     environment:
