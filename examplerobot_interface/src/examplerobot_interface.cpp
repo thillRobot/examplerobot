@@ -153,7 +153,7 @@ int main(int argc, char** argv)
   //target_pose1.orientation.w=0.5;
   target_pose1.position.x = 0.2;
   target_pose1.position.y = 0.2;
-  target_pose1.position.z = 0.8;
+  target_pose1.position.z = 0.85;
 
 
   move_group_interface.setPoseTarget(target_pose1);
@@ -262,7 +262,6 @@ int main(int argc, char** argv)
   // Let's specify a path constraint and a pose goal for our group.
   // First define the path constraint.
   
-  
   moveit_msgs::OrientationConstraint ocm;
   ocm.link_name = "end_effector";
   ocm.header.frame_id = "base_link";
@@ -277,7 +276,6 @@ int main(int argc, char** argv)
   path_constraints.orientation_constraints.push_back(ocm);
   move_group_interface.setPathConstraints(path_constraints);
    
-
   // Enforce Planning in Joint Space
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   //
@@ -312,10 +310,12 @@ int main(int argc, char** argv)
   //start_pose2.position.y = 0.0;
   //start_pose2.position.z = 0.7;
 
-  target_pose1.orientation = start_pose2.orientation; // set orientation goal to current tool pose
-  target_pose1.position.x = start_pose2.position.x;
-  target_pose1.position.y = start_pose2.position.y;
-  target_pose1.position.z = start_pose2.position.z-.25;
+  geometry_msgs::Pose target_pose2;
+
+  target_pose2.orientation = start_pose2.orientation; // set orientation goal to current tool pose
+  target_pose2.position.x = start_pose2.position.x;
+  target_pose2.position.y = start_pose2.position.y;
+  target_pose2.position.z = start_pose2.position.z-.25;
 
   //start_pose2.orientation = quat_msg;
   //start_pose2.position.x = 0.05;
@@ -328,7 +328,7 @@ int main(int argc, char** argv)
 
   // Now we will plan to the earlier pose target from the new
   // start state that we have just created.
-  move_group_interface.setPoseTarget(target_pose1);
+  move_group_interface.setPoseTarget(target_pose2);
   //move_group_interface.setPositionTarget(target_pose1.position.x,target_pose1.position.y,target_pose1.position.z);
 
   // Planning with constraints can be slow because every sample must call an inverse kinematics solver.
@@ -341,7 +341,7 @@ int main(int argc, char** argv)
   // Visualize the plan in RViz
   visual_tools.deleteAllMarkers();
   visual_tools.publishAxisLabeled(start_pose2, "start");
-  visual_tools.publishAxisLabeled(target_pose1, "goal");
+  visual_tools.publishAxisLabeled(target_pose2, "goal");
   visual_tools.publishText(text_pose, "Constrained Goal", rvt::WHITE, rvt::XLARGE);
   visual_tools.publishTrajectoryLine(my_plan.trajectory_, joint_model_group);
   visual_tools.trigger();

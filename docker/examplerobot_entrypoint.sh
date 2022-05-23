@@ -4,14 +4,11 @@ set -e
 
 source /opt/ros/noetic/setup.bash
 
-mkdir -p $EXBOT_WS/src 
+source $MOVEIT_WS/devel/setup.bash
 
-#cd $EXBOT_WS/src
-#git clone https://github.com/thillRobot/examplerobot_ros.git -b noetic-devel
-
+export EXBOT_WS="/home/examplerobot_ws" 
 cd $EXBOT_WS
-catkin build 
-
+catkin build
 source $EXBOT_WS/devel/setup.bash
 
 source /usr/share/gazebo/setup.sh
