@@ -1,4 +1,14 @@
 services:
+  examplerobot-gazebo:
+    build: .
+    command: roslaunch examplerobot_gazebo examplerobot_gazebo.launch
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
+      - $CATKIN_WS_PATH/src:/home/examplerobot_ws/src
+      # - $MOVEIT_WS_PATH/src:/home/moveit_ws/src 
   examplerobot-ompl:
     build: .
     command: roslaunch examplerobot_interface examplerobot_interface_ompl.launch
