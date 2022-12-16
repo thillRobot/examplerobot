@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  gazebo_simulation:
+    # Use the Docker image that was built from the Dockerfile
+    build: .
+    # Map the host's port to the container's port for accessing the Gazebo GUI
+    ports:
+      - "11345:11345"
+    # Mount the host's simulation directory as a volume in the container
+    volumes:
+      - ./simulation:/simulation
+    # Set the entrypoint script for launching the Gazebo simulation and ROS nodes
+

@@ -1,0 +1,54 @@
+<!-- Define the robot model -->
+<model name="examplerobot">
+  <!-- Define the base link of the arm -->
+  <link name="base_link">
+    <!-- Define the visual and collision properties for the base link -->
+    <visual>
+      <!-- Use the <geometry> element to specify the 3D geometry of the link -->
+      <geometry>
+        <!-- Import the STL file for the link's geometry -->
+        <mesh>
+          <uri>model://examplerobot_description/meshes/base_link.stl</uri>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://examplerobot_description/meshes/base_link.stl</uri>
+        </mesh>
+      </geometry>
+    </collision>
+    ...
+  </link>
+
+  <!-- Define a 2D array of D-H parameters for each joint -->
+  <?
+    dh_params = [[0, 0.5, 0, 0],
+                 [0, 0, 0.5, 0],
+                 [0, 0, 0.5, 0],
+                 [0, 0, 0.5, 0],
+                 [0, 0, 0.5, 0],
+                 [0, 0, 0.5, 0]]
+  ?>
+
+  <!-- Use a for loop to define all of the joints and links of the arm -->
+  <?for i in range(1, 7):?>
+    <!-- Define the joint -->
+    <joint name="joint<?=i?>" type="revolute">
+      <!-- Use D-H parameters to specify the joint's axis and limits -->
+      <axis xyz="1 0 0" />
+      <limit effort="..." velocity="..." lower="..." upper="..." />
+      <!-- Add the D-H parameters from the array -->
+      <dh param="<?=dh_params[i-1]?>" />
+      <!-- Connect the joint to the previous link -->
+      <parent link="link<?=i-1?>" />
+      <child link="link<?=i?>" />
+    </joint>
+
+    <!-- Define the link -->
+    <link name="link<?=i?>">
+      ...
+    </link>
+  <?endfor?>
+</model>
