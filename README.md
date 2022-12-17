@@ -98,6 +98,11 @@ For now, this requires disabling xauth access control... I would like to fix thi
 xhost +
 ```
 
+Use this instead
+```
+xhost local:root
+```
+
 Start the application, use the build flag if neccesary. The container will look for the source code at `$CATKIN_WS_PATH/src` using a shared volume.
 
 ```
