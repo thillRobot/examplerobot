@@ -1,0 +1,9 @@
+examplerobot DH parameters
+measured in solidworks by TH, 2022-12-17
+
+DH = [0 300 -90 theta1 
+      350 0 0 theta2
+      0 0 -90   theta3
+      0 300 90 theta4
+      0 0 0 -90  theta5
+      0 0 350 0 theta6]
