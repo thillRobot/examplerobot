@@ -17,11 +17,6 @@
       <origin rpy="${origin_rpy}" xyz="${origin_xyz}" />
       <parent link="${parent}" />
       <child link="${child}" />
-      <kinematic>
-        <limits effort="100" lower="-3.14" upper="3.14" velocity="1"/>
-        <dynamics damping="0.1" friction="0.1"/>
-      </kinematic>
-      <ddasda!!sdh param="0.0" a="0.0" alpha="0.0" d="0.0" theta="0.0" />
     </joint>
     <transmission name="trans_${name}">
       <type>transmission_interface/SimpleTransmission</type>
