@@ -1,13 +1,24 @@
-examplerobot Denvit - Hartenberg parameters
+examplerobot Denavit - Hartenberg parameters
 measured in solidworks by TH, 2022-12-17
 
-classical DH convention (Spong notation)
-      ai di ali thetai
-DH = [0 300 -90 theta1 
-      350 0 0 theta2
-      0 0 -90   theta3
-      0 300 90 theta4
-      0 0 0 -90  theta5
-      0 0 350 0 theta6]
+Classical DH convention (Spong notation)
+      ai di alphai thetai
+DH = [0     300   -90   theta1 
+      350   0     0     theta2
+      0     0     -90   theta3
+      0     300   90    theta4
+      0     0     -90   theta5
+      0     350   0     theta6]
+      [0      250  0          -] last row is fixed offset to tool tip, not sure if this is needed
 
-modified DH convention (Craig notation)
+Modified DH convention (Craig notation)
+    a(i-1) di   alpha(i-1) thetai
+DH=[0      300  0          theta1
+    0      0    90         theta2
+    350    0    0          theta3
+    0      300  90         theta4
+    0      0    -90        theta5
+    0      200  90         theta6]
+   [0      250  0          -] last row is fixed offset to tool tip, could drop frame 7 here too
+
+Unfortunately it seems like URDF and MOVEIT use the Modified DH convention. I amy be wrong.
