@@ -1,6 +1,7 @@
 examplerobot DH parameters
 measured in solidworks by TH, 2022-12-17
-
+spong notation
+      ai di ali thetai
 DH = [0 300 -90 theta1 
       350 0 0 theta2
       0 0 -90   theta3

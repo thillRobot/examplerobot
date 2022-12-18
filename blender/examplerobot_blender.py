@@ -15,17 +15,25 @@ bpy.ops.object.origin_set(type='ORIGIN_CURSOR')
 # The DH parameters should be a 2D array where each row represents a joint of the robot
 # Each row should contain the following values: theta, alpha, a, d, offset
 DH_params = [
-    [0, math.pi/2, 0, 0, 0],
-    [0, 0, 0, 1, 0],
-    [0, 0, 1, 0, 0],
-    [0, math.pi/2, 0, 1, 0],
+    [0, -math.pi/2, 0, .300, 0],
+    [0, 0,          .350, 1, 0],
     [0, -math.pi/2, 0, 0, 0],
-    [0, 0, 0, 0, 0],
+    [0, math.pi/2,  0, .300, 0],
+    [0, -math.pi/2, 0, 0, 0],
+    [0, 0,          0, .350, 0],
 ]
+#      a  d   al  th
+#     [0 300 -90 theta1 
+#      350 0 0 theta2
+#      0 0 -90   theta3
+#      0 300 90 theta4
+#      0 0 0 -90  theta5
+#      0 350 0 theta6]
+
 
 # Load the STL files for each link
 for i in range(len(DH_params)):
-    filepath="/home/thill/Documents/docker_ws/src/examplerobot_ros/examplerobot_description/meshes/link"+str(i)+".stl"
+    filepath="/home/thill/Documents/docker_ws/src/examplerobot_ros/examplerobot_description/meshes/spong/link"+str(i)+".stl"
     bpy.ops.import_mesh.stl(filepath=filepath)
 
 # Calculate the transformation matrix for each link and apply it to the corresponding object
