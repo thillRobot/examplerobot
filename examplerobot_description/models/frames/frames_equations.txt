@@ -1,0 +1,4 @@
+"frame_arrow_length"=150
+"frame_arrow_head_length"=10
+"frame_arrow_head_od"=5
+"frame_arrow_odA"=4
