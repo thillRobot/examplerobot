@@ -1,6 +1,7 @@
-examplerobot DH parameters
+examplerobot Denvit - Hartenberg parameters
 measured in solidworks by TH, 2022-12-17
-spong notation
+
+classical DH convention (Spong notation)
       ai di ali thetai
 DH = [0 300 -90 theta1 
       350 0 0 theta2
@@ -8,3 +9,5 @@ DH = [0 300 -90 theta1
       0 300 90 theta4
       0 0 0 -90  theta5
       0 0 350 0 theta6]
+
+modified DH convention (Craig notation)
