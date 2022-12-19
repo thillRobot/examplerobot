@@ -16,8 +16,8 @@
               ixx="5.3235" ixy="0" ixz="0"
               iyy="5.3235" iyz="0"
               izz="3.9655"
-              meshfile="package://examplerobot_description/meshes/base_link.stl"
-              meshscale="1.0 1.0 1.0" />
+              meshfile="package://examplerobot_description/meshes/modified_dh/base_link.stl"
+              meshscale=".001 .001 .001" />
 
   <!-- Link 1 - link_01 -->             
   <xacro:link_mesh name="${link_01_name}"
@@ -26,8 +26,8 @@
               ixx="1.3235" ixy="0" ixz="0"
               iyy="1.3235" iyz="0"
               izz="0.9655"
-              meshfile="package://examplerobot_description/meshes/link1.stl"
-              meshscale="1.0 1.0 1.0" />
+              meshfile="package://examplerobot_description/meshes/modified_dh/link1.stl"
+              meshscale=".001 .001 .001" />
 
   <!-- Link 2 - link_02 -->  
   <xacro:link_mesh name="${link_02_name}"
@@ -36,8 +36,8 @@
               ixx="1.3235" ixy="0" ixz="0"
               iyy="1.3235" iyz="0"
               izz="0.9655"
-              meshfile="package://examplerobot_description/meshes/link2.stl"
-              meshscale="1.0 1.0 1.0" /> 
+              meshfile="package://examplerobot_description/meshes/modified_dh/link2.stl"
+              meshscale=".001 .001 .001" /> 
 
   <!-- Link 3 - link_03 -->  
   <xacro:link_mesh name="${link_03_name}"
@@ -46,8 +46,8 @@
               ixx="1.3235" ixy="0" ixz="0"
               iyy="1.3235" iyz="0"
               izz="0.9655"
-              meshfile="package://examplerobot_description/meshes/link3.stl"
-              meshscale="1.0 1.0 1.0" />            
+              meshfile="package://examplerobot_description/meshes/modified_dh/link3.stl"
+              meshscale=".001 .001 .001" />            
 
   <!-- Link 4 - link_04 -->  
   <xacro:link_mesh name="${link_04_name}"
@@ -56,8 +56,8 @@
               ixx="1.3235" ixy="0" ixz="0"
               iyy="1.3235" iyz="0"
               izz="0.9655"
-              meshfile="package://examplerobot_description/meshes/link4.stl"
-              meshscale="1.0 1.0 1.0" />
+              meshfile="package://examplerobot_description/meshes/modified_dh/link4.stl"
+              meshscale=".001 .001 .001" />
 
   <!-- Link 5 - link_05 -->  
   <xacro:link_mesh name="${link_05_name}"
@@ -66,8 +66,8 @@
               ixx="1.3235" ixy="0" ixz="0"
               iyy="1.3235" iyz="0"
               izz="0.9655"
-              meshfile="package://examplerobot_description/meshes/link5.stl"
-              meshscale="1.0 1.0 1.0" />            
+              meshfile="package://examplerobot_description/meshes/modified_dh/link5.stl"
+              meshscale=".001 .001 .001" />            
 
   <!-- Link 6 - link_06 -->  
   <xacro:link_mesh name="${link_06_name}"
@@ -76,8 +76,8 @@
               ixx="1.3235" ixy="0" ixz="0"
               iyy="1.3235" iyz="0"
               izz="0.9655"
-              meshfile="package://examplerobot_description/meshes/link6.stl"
-              meshscale="1.0 1.0 1.0" />    
+              meshfile="package://examplerobot_description/meshes/modified_dh/link6.stl"
+              meshscale=".001 .001 .001" />    
 
   <!-- Link 7 - end_effector -->  
   <xacro:link_mesh name="${link_07_name}"
@@ -86,8 +86,8 @@
               ixx="1.3235" ixy="0" ixz="0"
               iyy="1.3235" iyz="0"
               izz="0.9655"
-              meshfile="package://examplerobot_description/meshes/end_effector.stl"
-              meshscale="1.0 1.0 1.0" />        
+              meshfile="package://examplerobot_description/meshes/modified_dh/end_effector.stl"
+              meshscale=".001 .001 .001" />        
   
   <!-- Joint 0 - world__base_link - fixed robot --> 
   <!--
@@ -103,7 +103,7 @@
   <!-- Link ref - ref_link - this is the 'dummy link' -->     
   <xacro:ref_link_mesh name="${link_ref_name}"
               origin_rpy="0 0 0" origin_xyz="0 0 0"
-              meshfile="package://examplerobot_description/meshes/base_link.stl"
+              meshfile="package://examplerobot_description/meshes/modified_dh/link0.stl"
               meshscale="0.0001 0.0001 0.0001" />    
 
   <xacro:fixed_joint name="${link_ref_name}__${link_00_name}" type="fixed"
@@ -115,7 +115,7 @@
   <!-- Joint 1 - base_link__link_01 -->          
   <xacro:rev_joint name="${link_00_name}__${link_01_name}" type="revolute"
            axis_xyz="0 0 1"
-           origin_rpy="0 0 0" origin_xyz="0 0 0.3"
+           origin_rpy="0 0 0" origin_xyz="0 0 0.300"
            parent="base_link" child="link_01"
            limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />
            <!-- ai="0" di=".350" alphai="-1.571" thetai="0"/> -->
@@ -130,7 +130,7 @@
   <!-- Joint 3 - link_02__link03 -->             
   <xacro:rev_joint name="${link_02_name}__${link_03_name}" type="revolute"
            axis_xyz="0 0 1"
-           origin_rpy="0 0 1.571" origin_xyz="0.3 0 0.0"
+           origin_rpy="0 0 1.571" origin_xyz="0.350 0 0.0"
            parent="link_02" child="link_03"
            limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" /> 
   
@@ -151,14 +151,14 @@
   <!-- Joint 6 - link_05__link_06 -->             
   <xacro:rev_joint name="${link_05_name}__${link_06_name}" type="revolute"
            axis_xyz="0 0 1"
-           origin_rpy="1.571 0 0" origin_xyz="0.0 -0.45 0.0"
+           origin_rpy="1.571 0 0" origin_xyz="0.0 -0.200 0.0"
            parent="link_05" child="link_06"
            limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />  
   
   <!-- Joint 7 - link_06__end_effector -->
   <xacro:fixed_joint name="${link_06_name}__${link_07_name}" type="fixed"
            axis_xyz="0 0 1"
-           origin_rpy="0 0 0" origin_xyz="0.0 0.0 0.0"
+           origin_rpy="0 0 0" origin_xyz="0.0 0.0 .250"
            parent="link_06" child="end_effector" />               
 
   <!-- END - Robot description -->
