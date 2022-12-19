@@ -62,6 +62,9 @@ Click the screenshot to watch a demonstration on Youtube.
 roslaunch examplerobot_gazebo gazebo.launch x:=1 y:=1 z:=1
 ```
 
+<img src="examplerobot_gazebo/png_images/examplerobot_gazebo.png" alt="drawing" width="400"/>
+
+
 
 ### Docker
 
