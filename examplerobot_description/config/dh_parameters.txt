@@ -5,11 +5,11 @@ Classical DH convention (Spong notation)
       ai di alphai thetai
 DH = [0     300   -90   theta1 
       350   0     0     theta2
-      0     0     -90   theta3
-      0     300   90    theta4
-      0     0     -90   theta5
+      0     0     90   theta3
+      0     300   -90    theta4
+      0     0     90   theta5
       0     350   0     theta6]
-      [0      250  0          -] last row is fixed offset to tool tip, not sure if this is needed
+      [0    250   0          -] last row is fixed offset to tool tip, not sure if this is needed
 
 Modified DH convention (Craig notation)
     a(i-1) di   alpha(i-1) thetai
